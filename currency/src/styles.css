@@ -15,6 +15,53 @@ body {
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 
+.homeLink{
+  background-color: #1976d2;
+  color: white;
+  font-weight: 900;
+  border: none;
+  /* width: auto;
+  height: auto; */
+  padding: 16px;
+  min-width: 15%;
+  position: relative;
+  border-radius: 6px;
+}
+
+#homeLink {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 900;
+  border: none;
+
+  padding: 16px;
+  min-width: 15%;
+  position: relative;
+  border-radius: 6px;
+}
+
+#divlink{
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color:white;
+  font-size: 30px;
+}
+
+#divlink:hover{
+  color: #ffef8f;
+}
+
+.homeLogo{
+  margin-top: 10px;
+}
+
+.siteName{
+  color: white;
+  font-size: 30px;
+
+}
 
 .divCalculator{
     padding: 10px 20px;
@@ -31,10 +78,12 @@ body {
     padding: 16px;
     min-width: 15%;
     position: relative;
+    border-radius: 6px;
 }
 .buttonMenu:hover{
     background-color: #4b90d4;
     border-radius: 6px;
+    color: #ffef8f;
 }
 
 :host {
@@ -71,7 +120,7 @@ body {
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    /* background-color: #1976d2; */
     color: white;
     font-weight: 600;
   }
@@ -118,6 +167,7 @@ body {
     margin-top: 16px;
   }
 
+  /* Estilização bloco do meio
   .card {
     border-radius: 4px;
     border: 1px solid #eee;
@@ -156,6 +206,8 @@ body {
     fill: rgb(105, 103, 103);
   }
 
+
+  
   .card.highlight-card {
     background-color: #1976d2;
     color: white;
@@ -169,6 +221,7 @@ body {
   .card.card.highlight-card span {
     margin-left: 60px;
   }
+        Fim estilização Bloco do Meio */
 
   svg#rocket {
     width: 80px;
