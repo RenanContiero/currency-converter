@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DolarComponent } from './dolar/dolar.component';
 import { EuroComponent } from './euro/euro.component';
+import { LibraComponent } from './libra/libra.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DolarComponent,
-    EuroComponent
+    EuroComponent,
+    LibraComponent
   ],
   imports: [
     BrowserModule,
