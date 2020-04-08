@@ -1,11 +1,20 @@
 html, body { 
     height: 100%;
-    background: linear-gradient(60deg, #f7f5aa 0%, #84baf8 100%); 
-    /* background-image: url("./assets/img/teste.png"); */
+    margin-top: 50px;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-image: url("./assets/img/backgroundangular.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #8fb6e5;
+  
+}
 @import "~@angular/material/prebuilt-themes/indigopink.css";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
 
 .divCalculator{
     padding: 10px 20px;
