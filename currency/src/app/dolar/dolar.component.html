@@ -1,0 +1,5 @@
+<div class = "calculadora">
+    US$ <input type="number" class="valor1" (keyup)="calculateDolar($event)"placeholder = "5,22">
+    R$ <input type="number" class="valor2" (keyup)="calculateReal($event)" >
+    <p>{{numberResult | currency:"USD"}}</p>
+</div>
