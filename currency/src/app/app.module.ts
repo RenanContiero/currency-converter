@@ -9,6 +9,10 @@ import { EuroComponent } from './euro/euro.component';
 import { LibraComponent } from './libra/libra.component';
 import { CanadianComponent } from './canadian/canadian.component';
 import { AustralianComponent } from './australian/australian.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatInputModule} from '@angular/material/input';
+import { MatIconModule } from "@angular/material/icon";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { AustralianComponent } from './australian/australian.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatInputModule,
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
