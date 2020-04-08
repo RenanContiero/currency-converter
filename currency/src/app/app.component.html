@@ -1,54 +1,49 @@
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  
-    <div id ="homeLink">
-      
-      <img class ="homeLogo" width="70" alt="Angular Logo" src="./assets/img/angularlogo.png"/>  
-      
-      <a href="http://localhost:4200/" class="link">
-        <div id="divlink">
-            Magic Converter
-        </div>
-    </a>
 
+  <div id="homeLink">
+    <img class="homeLogo" width="70" alt="Angular Logo" src="./assets/img/angularlogo.png" />
+    <div id="divlink">
+      Magic Converter
     </div>
+  </div>
 
   <div class="spacer"></div>
 
 
-  <button mat-button [matMenuTriggerFor]="beforeMenu" class = "buttonMenu">Moedas</button>
-    <mat-menu #beforeMenu="matMenu" xPosition="before"> 
-      <a routerLink="/dolar"> 
-        <button mat-menu-item>
-          <mat-icon svgIcon="usa"></mat-icon>
-          <span>Dólar Americano</span>
-        </button>
-      </a>
-      <a routerLink="/australian">
-        <button mat-menu-item>
-          <mat-icon svgIcon="australia"></mat-icon>
-          <span>Dólar Australiano</span>
-        </button>
-      </a>
-      <a routerLink="/canadian">
-        <button mat-menu-item>
-          <mat-icon svgIcon="canada"></mat-icon>
-          <span>Dólar Canadense</span>
-        </button>
-      </a>
-      <a routerLink="/euro">
-        <button mat-menu-item>
-          <mat-icon svgIcon="eu"></mat-icon>
-          <span>Euro</span>
-        </button>
-      </a>
-      <a routerLink="/libra">
-        <button mat-menu-item>
-          <mat-icon svgIcon="uk"></mat-icon>
-          <span>Libra</span>
-        </button>
-      </a>
-    </mat-menu>
+  <button mat-button [matMenuTriggerFor]="beforeMenu" class="buttonMenu">Moedas</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <a routerLink="/dolar">
+      <button mat-menu-item>
+        <mat-icon svgIcon="usa"></mat-icon>
+        <span>Dólar Americano</span>
+      </button>
+    </a>
+    <a routerLink="/australian">
+      <button mat-menu-item>
+        <mat-icon svgIcon="australia"></mat-icon>
+        <span>Dólar Australiano</span>
+      </button>
+    </a>
+    <a routerLink="/canadian">
+      <button mat-menu-item>
+        <mat-icon svgIcon="canada"></mat-icon>
+        <span>Dólar Canadense</span>
+      </button>
+    </a>
+    <a routerLink="/euro">
+      <button mat-menu-item>
+        <mat-icon svgIcon="eu"></mat-icon>
+        <span>Euro</span>
+      </button>
+    </a>
+    <a routerLink="/libra">
+      <button mat-menu-item>
+        <mat-icon svgIcon="uk"></mat-icon>
+        <span>Libra</span>
+      </button>
+    </a>
+  </mat-menu>
 </div>
 
 <div class="content" role="main">
@@ -63,4 +58,3 @@
 
 
   </div>
-

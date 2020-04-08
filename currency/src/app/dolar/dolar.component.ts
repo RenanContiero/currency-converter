@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
+import { ApiService } from "../api.service"
 
 @Component({
   selector: 'app-dolar',
@@ -9,10 +10,14 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class DolarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  public persondata = [];
+  constructor(private myservice: ApiService) { }
+  
+  ngOnInit() {
+    this.myservice.getData().subscribe((data) => {
+      this.persondata = Array.from(Object.keys(data), k => data[k]);
+      console.log(this.persondata);
+    })};
 
   valueDolar:number = 5.22;
   numberResult:number;
@@ -31,7 +36,14 @@ export class DolarComponent implements OnInit {
     console.log(this.numberResult);
   }
 
+
 }
+
+
+
+
+
+
 
 export class AppComponent {
   title = 'currency';

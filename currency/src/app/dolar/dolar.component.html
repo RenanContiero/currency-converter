@@ -3,5 +3,11 @@
     <mat-icon svgIcon="usa"></mat-icon><input type="number" class="valor1" (keyup)="calculateDolar($event)"placeholder = "$ 5,22"><br/>
     <mat-icon svgIcon="brazil"></mat-icon> <input type="number" class="valor2" (keyup)="calculateReal($event)" ><br/>
     <p class = "convertedResult"><strong>{{numberResult | currency:"USD"}}</strong></p>
+
+    <ul>
+        <li *ngFor="let item of persondata; let i = index">
+            {{item.BRL}}
+        </li>
+    </ul>
     
 </div>
