@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DolarComponent } from './dolar/dolar.component';
 import { EuroComponent } from './euro/euro.component';
 import { LibraComponent } from './libra/libra.component';
+import { CanadianComponent } from './canadian/canadian.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DolarComponent,
     EuroComponent,
-    LibraComponent
+    LibraComponent,
+    CanadianComponent
   ],
   imports: [
     BrowserModule,
