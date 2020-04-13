@@ -15,6 +15,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
 import { ApiService } from './api.service';
 import { GraphicComponent } from './graphic/graphic.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { GraphicComponent } from './graphic/graphic.component';
     MatInputModule,
     MatIconModule,
     HttpClientModule,
+    ChartsModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
