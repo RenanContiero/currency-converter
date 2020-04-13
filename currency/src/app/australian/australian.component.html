@@ -2,6 +2,6 @@
     <p class = "calcName"><strong>Dólar Australiano</strong></p>
     <mat-icon svgIcon="australia"></mat-icon><input type="number" class="valor1" (keyup)="calculateDolarAustralian($event)"placeholder = "$ 1.00"><br/>
     <mat-icon svgIcon="brazil"></mat-icon><input type="number" class="valor2" (keyup)="calculateReal($event)" placeholder="R$ {{this.australian}}" ><br/>
-    <p class = "convertedResult"><strong>{{numberResult | currency:"BRL"}}</strong></p>
-    <!-- <p class = "convertedResult"><strong>{{numberResult | currency:"AUD"}}</strong></p>  -->
+    <p *ngIf="display === true" class = "convertedResult"><strong>{{numberResult | currency:"BRL"}}</strong></p>
+    <p *ngIf="display === false" class = "convertedResult"><strong>{{numberResult | currency:"USD"}}</strong></p>
 </div>

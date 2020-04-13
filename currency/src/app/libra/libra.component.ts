@@ -32,6 +32,7 @@ export class LibraComponent implements OnInit {
     this.numberResult = Number(result);
     this.numberResult = this.numberResult * this.libra;
     console.log(this.numberResult);
+    this.display = true;
   }
 
   calculateReal(event){
@@ -39,6 +40,7 @@ export class LibraComponent implements OnInit {
     this.numberResult = Number(result);
     this.numberResult = this.numberResult / this.libra;
     console.log(this.numberResult);
+    this.display = false;
   }
 
 }

@@ -33,6 +33,8 @@ export class CanadianComponent implements OnInit {
     this.numberResult = Number(result);
     this.numberResult = this.numberResult * this.cad;
     console.log(this.numberResult);
+    this.display = true;
+
   }
 
   calculateReal(event){
@@ -40,6 +42,7 @@ export class CanadianComponent implements OnInit {
     this.numberResult = Number(result);
     this.numberResult = this.numberResult / this.cad;
     console.log(this.numberResult);
+    this.display = false;
   }
 
 }

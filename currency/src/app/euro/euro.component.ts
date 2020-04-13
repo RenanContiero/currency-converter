@@ -31,6 +31,7 @@ export class EuroComponent implements OnInit {
     this.numberResult = Number(result);
     this.numberResult = this.numberResult * this.euro;
     console.log(this.numberResult);
+    this.display = true;
   }
 
   calculateReal(event){
@@ -38,6 +39,7 @@ export class EuroComponent implements OnInit {
     this.numberResult = Number(result);
     this.numberResult = this.numberResult / this.euro;
     console.log(this.numberResult);
+    this.display = false;
   }
 
 }
