@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
+import { ApiService } from "../api.service"
 
 @Component({
   selector: 'app-canadian',
@@ -9,25 +10,35 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class CanadianComponent implements OnInit {
 
-  constructor() { }
+  persondata: any;
+  numberResult:number;
+  cad:number;
+  display:boolean;
 
-  ngOnInit(): void {
-  }
+  constructor(private myservice: ApiService) { }
 
-  valueDolar:number = 3.74;
+  ngOnInit() {
+    this.myservice.getData('CAD').subscribe((data) => {
+      this.persondata =  Object.create(data).rates;
+      console.log(this.persondata);
+      this.cad = this.persondata.BRL.toFixed(2);
+
+    })
+  };  
+
   numberResult:number;
 
   calculateDolarCanadian(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult * this.valueDolar;
+    this.numberResult = this.numberResult * this.cad;
     console.log(this.numberResult);
   }
 
   calculateReal(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult / this.valueDolar;
+    this.numberResult = this.numberResult / this.cad;
     console.log(this.numberResult);
   }
 
