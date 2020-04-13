@@ -26,8 +26,6 @@ export class CanadianComponent implements OnInit {
     })
   };  
 
-  numberResult:number;
-
   calculateDolarCanadian(event){
     let result = event.target.value;
     this.numberResult = Number(result);

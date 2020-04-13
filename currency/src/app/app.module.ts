@@ -14,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
 import { ApiService } from './api.service';
+import { GraphicComponent } from './graphic/graphic.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ApiService } from './api.service';
     EuroComponent,
     LibraComponent,
     CanadianComponent,
-    AustralianComponent
+    AustralianComponent,
+    GraphicComponent
   ],
   imports: [
     BrowserModule,
