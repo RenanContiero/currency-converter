@@ -24,7 +24,6 @@ export class DolarComponent implements OnInit {
          this.persondata =  Object.create(data).rates;
           console.log(this.persondata);
           this.dolar = this.persondata.BRL.toFixed(2);
-
        })
     };
 
