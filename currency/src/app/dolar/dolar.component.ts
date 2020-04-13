@@ -3,6 +3,7 @@ import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { ApiService } from "../api.service"
 
+
 @Component({
   selector: 'app-dolar',
   templateUrl: './dolar.component.html',
@@ -11,30 +12,39 @@ import { ApiService } from "../api.service"
 export class DolarComponent implements OnInit {
 
   persondata: any;
+  numberResult:number;
+  dolar:number;
+  display:boolean;
+  
+
   constructor(private myservice: ApiService) { }
   
      ngOnInit() {
        this.myservice.getData('USD').subscribe((data) => {
          this.persondata =  Object.create(data).rates;
-        console.log(this.persondata);
+          console.log(this.persondata);
+          this.dolar = this.persondata.BRL.toFixed(2);
+
        })
     };
 
-  numberResult:number;
+    
 
   calculateDolar(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult * this.persondata.BRL;
+    this.numberResult = this.numberResult * this.persondata.BRL.toFixed(2);
     console.log(this.numberResult);
-    console.log(this.persondata.BRL);
+    this.display = true;
   }
 
   calculateReal(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult / this.persondata.BRL;
+    this.numberResult = this.numberResult / this.persondata.BRL.toFixed(2);
     console.log(this.numberResult);
+    this.display = false;
+
   }
 
 }
