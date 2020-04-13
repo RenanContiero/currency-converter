@@ -33,7 +33,7 @@ export class DolarComponent implements OnInit {
   calculateDolar(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult * this.persondata.BRL.toFixed(2);
+    this.numberResult = this.numberResult * this.dolar;
     console.log(this.numberResult);
     this.display = true;
   }
@@ -41,10 +41,9 @@ export class DolarComponent implements OnInit {
   calculateReal(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult / this.persondata.BRL.toFixed(2);
+    this.numberResult = this.numberResult / this.dolar;
     console.log(this.numberResult);
     this.display = false;
-
   }
 
 }
