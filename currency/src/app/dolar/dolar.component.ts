@@ -10,40 +10,34 @@ import { ApiService } from "../api.service"
 })
 export class DolarComponent implements OnInit {
 
-  public persondata = [];
+  persondata: any;
   constructor(private myservice: ApiService) { }
   
-  ngOnInit() {
-    this.myservice.getData().subscribe((data) => {
-      this.persondata = Array.from(Object.keys(data), k => data[k]);
-      console.log(this.persondata);
-    })};
+     ngOnInit() {
+       this.myservice.getData('USD').subscribe((data) => {
+         this.persondata =  Object.create(data).rates;
+        console.log(this.persondata);
+       })
+    };
 
-  valueDolar:number = 5.22;
   numberResult:number;
 
   calculateDolar(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult * this.valueDolar;
+    this.numberResult = this.numberResult * this.persondata.BRL;
     console.log(this.numberResult);
+    console.log(this.persondata.BRL);
   }
 
   calculateReal(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult / this.valueDolar;
+    this.numberResult = this.numberResult / this.persondata.BRL;
     console.log(this.numberResult);
   }
 
-
 }
-
-
-
-
-
-
 
 export class AppComponent {
   title = 'currency';

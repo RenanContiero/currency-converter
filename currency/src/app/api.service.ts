@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
+
+const apiUrl = 'https://api.exchangeratesapi.io/latest?base=';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  private apiUrl = 'https://api.exchangeratesapi.io/latest';
-
   constructor(private http: HttpClient) { }
 
-  getData() {
-    return this.http.get(this.apiUrl);
+    getData(coins: string) {
+      return this.http.get(apiUrl+coins); 
+   }
 
-  }
+  // listar(){
+  //   return this.http.get<any[]>(`${apiUrl}`);
+
+  // }
+
 
   // private handleError<T> (operation = 'operation', result?: T) {
   //   return (error: any): Observable<T> => {

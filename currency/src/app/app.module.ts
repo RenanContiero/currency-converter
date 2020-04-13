@@ -13,6 +13,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { HttpClientModule } from "@angular/common/http";
     MatIconModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
