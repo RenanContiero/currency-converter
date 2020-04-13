@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
+import { ApiService } from "../api.service"
 
 @Component({
   selector: 'app-australian',
@@ -9,25 +10,33 @@ import { DomSanitizer } from "@angular/platform-browser";
 })
 export class AustralianComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  valueDolar:number = 3.24;
+  persondata: any;
   numberResult:number;
+  australian:number;
+  display:boolean;
+
+  constructor(private myservice: ApiService) { }
+
+  ngOnInit() {
+    this.myservice.getData('AUD').subscribe((data) => {
+      this.persondata =  Object.create(data).rates;
+      console.log(this.persondata);
+      this.australian = this.persondata.BRL.toFixed(2);
+
+    })
+  };  
 
   calculateDolarAustralian(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult * this.valueDolar;
+    this.numberResult = this.numberResult * this.australian;
     console.log(this.numberResult);
   }
 
   calculateReal(event){
     let result = event.target.value;
     this.numberResult = Number(result);
-    this.numberResult = this.numberResult / this.valueDolar;
+    this.numberResult = this.numberResult / this.australian;
     console.log(this.numberResult);
   }
 
