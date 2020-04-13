@@ -1,6 +1,7 @@
 <div class = "calculadora">
     <p class = "calcName"><strong>Dólar Canadense</strong></p>
-    <mat-icon svgIcon="canada"></mat-icon><input type="number" class="valor1" (keyup)="calculateDolarCanadian($event)"placeholder = "$ 3.74"><br/>
-    <mat-icon svgIcon="brazil"></mat-icon><input type="number" class="valor2" (keyup)="calculateReal($event)" ><br/>
-    <p class = "convertedResult"><strong>{{numberResult | currency:"USD"}}</strong></p>
+    <mat-icon svgIcon="canada"></mat-icon><input type="number" class="valor1" (keyup)="calculateDolarCanadian($event)"placeholder = "$ 1.00"><br/>
+    <mat-icon svgIcon="brazil"></mat-icon><input type="number" class="valor2" (keyup)="calculateReal($event)" placeholder="R$ {{this.cad}}"><br/>
+    <p class = "convertedResult"><strong>{{numberResult | currency:"BRL"}}</strong></p>
+    <!-- <p class = "convertedResult"><strong>{{numberResult | currency:"CAD"}}</strong></p>  -->
 </div>
