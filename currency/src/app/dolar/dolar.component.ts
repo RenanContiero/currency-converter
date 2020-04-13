@@ -27,8 +27,7 @@ export class DolarComponent implements OnInit {
        })
     };
 
-    
-
+  
   calculateDolar(event){
     let result = event.target.value;
     this.numberResult = Number(result);
